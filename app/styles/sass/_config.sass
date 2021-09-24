@@ -1,0 +1,428 @@
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap')
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css')
+@import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Volkhov:wght@700&display=swap')
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+// @include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+// @include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+// @include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+// @include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+// burger menu icon
+
+
+
+
+// burger menu icon
+
+.wrapper 
+	max-width: 1440px
+	margin: 0 auto
+	background: url(../images/Decore.png)
+	background-repeat: no-repeat 
+
+.content 
+	max-width: 1141.15px
+	margin: 0 auto
+	padding-top: 30px
+	padding-left: 40px
+	padding-right: 40px
+
+header 
+	width: 100%
+	display: flex
+	justify-content: space-between
+	nav 
+		margin-top: 8px
+		a 
+			margin-left: 58px
+			text-decoration: none 
+			color: #39425D
+			font-family: Poppins
+			font-style: normal
+			font-weight: 500 
+			line-height: 24px
+			font-size: 16px
+		.menu__link,
+		.menu__item
+			transition: 0.6s
+			&:hover
+				color: #DF6951
+		.menu__item_button
+			transition: 0.6s 
+			// display: flex
+			// justify-content: center
+			// align-items: center
+			&:hover
+				background-color: #DF6951
+				color: #ffffff 
+				border: 1px solid 1px solid rgba(255, 241, 218, 0.1)
+				
+.logo 
+	i
+		display: none
+
+.menu__item_button
+	width: 100.15px
+	height: 40px
+	padding: 8px 18px
+	border-radius: 5px
+	border: 1px solid #39425D
+	margin-right: 30px
+
+select 
+	background-color: #FFF1DA 
+	border: none 
+	color: #181E4B
+
+.content-block 
+	display: flex
+	justify-content: space-between
+	margin-top: 25px
+
+.info
+	width: 55%
+	margin-top: 112px
+	.text 
+		font-family: Poppins
+		font-style: normal
+		font-weight: bold 
+		font-size: 20px
+		line-height: 30px 
+		text-transform: uppercase 
+		color: #DF6951
+		margin-bottom: 27px
+		display: block
+	h1 
+		font-family: Volkhov 
+		font-style: normal
+		font-weight: 700 
+		font-size: 84px 
+		line-height: 89px 
+		latter-spacing: -0.04em 
+		color: #181E4B
+		margin: 0px
+		display: block 
+		margin-bottom: 28px
+	.decore 
+		display: flex
+		align-items: center
+		background: url(../images/Decore2.png) 
+		background-repeat: no-repeat
+		background-position: right bottom
+	p 
+		font-family: Poppins
+		font-style: normal
+		font-weight: 500 
+		font-size: 16px 
+		line-height: 30px
+		color: #5E6282
+		margin: 0px
+
+.text-decore 
+	position: absolute 
+	top: 22.5%
+	left: 30%
+	z-index: -1
+
+.image 
+	width: 45%
+	// position: relative
+	img 
+		position: absolute
+		z-index: 100
+		right: 9%
+		// max-width: 100%
+
+.button-block 
+	display: flex
+	margin-top: 35px
+	.yellow
+		width: 170px
+		height: 60px
+		background-color: #F1A501 
+		box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15)
+		border-radius: 10px
+		color: #fff
+		border: none
+		font-family: Poppins 
+		font-style: normal 
+		font-weight: 500 
+		font-size: 17px
+		line-height: 25px
+		text-align: center 
+		transition: 0.6s
+		&:hover
+			background-color: #DF6951 
+			box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3)
+			cursor: pointer
+	.orange 
+		width: 52px
+		height: 52px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		border: none
+		background-color: #DF6951 
+		box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3)
+		transition: 0.6s
+		&:hover
+			background-color: #F1A501 
+			box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15)
+	a 
+		text-decoration: none
+		font-family: Poppins 
+		font-style: normal 
+		font-weight: 500 
+		font-size: 17px
+		line-height: 25px 
+		color: #686D77
+		margin: 0px 20px
+		text-transform: capitalize
+		transition: 0.6s
+		&:hover
+			color: #DF6951
+			text-decoration: underline
+			
+
+.button-body 
+	height: 52px
+	margin-left: 45px
+	display: flex
+	align-items: center 
+
+.contact-form 
+	margin-top: 150px
+	padding-top: 82px
+	background: url(../images/Group.png)
+	background-repeat: no-repeat 
+	background-position: bottom
+	position: relative
+	.button-row
+		width: 70px
+		height: 70px
+		border-radius: 50%
+		background: linear-gradient(201.65deg, #747DEF 10.27%, #5E3BE1 100%)
+		border: none
+		position: absolute
+		right: -3%
+		top: 4%
+
+.header-block
+	h2
+		font-family: Poppins
+		font-style: normal 
+		font-weight: bold 
+		font-size: 33px
+		line-height: 54px
+		text-align: center 
+		color: #5E6282
+
+
+.form-block
+	display: flex
+	justify-content: center
+	margin-top: 65px
+	padding-bottom: 85px
+
+form 
+	display: flex
+	button 
+		width: 180px
+		height: 68px 
+		color: #fff
+		background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%)
+		border: none
+		border-radius: 10px
+		margin-left: 30px
+		transition: 0.6s 
+		&:hover 
+			background: linear-gradient(180deg, #FF7F50 0%, #FF806C 100%)
+			cursor: pointer
+
+.input-body 
+	max-width: 380px
+	height: 68px
+	background-color: #fff 
+	display: flex
+	align-items: center
+	border-radius: 10px
+	padding-left: 31px
+	margin-right: 0px
+	input 
+		border: none
+		margin-left: 5px 
+
+
+
+
+@media(max-width: 1141.15px)
+	.content
+		max-width: 992px
+	header
+		// border: 1px solid red
+		flex-direction: column
+		justify-content: center
+	.content-block
+		display: flex
+		flex-direction: column
+		// position: relative
+	.info
+		width: 70%
+	.image 
+		width: 100%
+
+		img
+			// border: 1px solid red
+			max-width: 50%
+			left: 50%
+			top: 15%
+
+	.contact-form
+		// width: 50% 
+		// border: 1px solid red
+
+		
+@media(max-width: 992px)
+	.content 
+		max-width: 750px
+	.menu 
+		// border: 1px solid green
+		a 
+			margin-left: 20px
+	select
+		background: none
+		// width: 20%
+	.info
+		width: 60%
+	.image 
+		width: 100%
+
+@media(max-width: 767px)
+	.content 
+		max-width: none
+	.logo
+		width: 100%
+		display: flex
+		justify-content: space-between 
+		i 
+			font-size: 20px
+			display: block
+			color: #181E4B
+	.menu-block
+		display: none
+	.menu 
+		margin-top: 20px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		a 
+			text-align: center
+			font-size: 20px
+			margin: 0px
+			padding: 5px
+	.menu__item_button
+		width: 100%  
+		display: flex
+		justify-content: center
+		align-items: center
+		border: none 
+	select
+		margin: 0 auto
+		background: none
+		width: 50px
+	.content-block
+		display: flex
+		flex-direction: column
+		// position: relative
+	.info
+		width: 100%
+	.image 
+		width: 100%
+		// margin-top: 30%
+		// margin-bottom: 100%
+		display: none
+		img 
+			max-width: 100%
+			left: 0%
+			top: 50%
+	.button-block
+		display: flex
+		flex-direction: column 
+		.yellow
+			width: 100%
+			margin-bottom: 20px
+	.button-body
+		width: 100% 
+		display: flex
+		justify-content: center
+		margin: 0px
+
+	.contact-form
+		margin-top: 50px
+
+	form
+		width: 100% 
+		display: flex
+		flex-direction: column
+		justify-content: center
+		button
+			width: 100% 
+			margin: 30px 0px 0px 0px
+	.input-body
+		margin-top: 10px
+		width: 90%
+	 
