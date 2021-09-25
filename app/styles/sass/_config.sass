@@ -79,9 +79,10 @@ header
 	display: flex
 	justify-content: space-between
 	nav 
-		margin-top: 8px
+		margin-top: 7px
 		a 
-			margin-left: 58px
+			margin-left: 29px
+			margin-right: 28px
 			text-decoration: none 
 			color: #39425D
 			font-family: Poppins
@@ -96,28 +97,23 @@ header
 				color: #DF6951
 		.menu__item_button
 			transition: 0.6s 
-			// display: flex
-			// justify-content: center
-			// align-items: center
 			&:hover
 				background-color: #DF6951
 				color: #ffffff 
 				border: 1px solid 1px solid rgba(255, 241, 218, 0.1)
-				
+
 .logo 
 	i
 		display: none
 
 .menu__item_button
-	width: 100.15px
-	height: 40px
 	padding: 8px 18px
 	border-radius: 5px
 	border: 1px solid #39425D
 	margin-right: 30px
-
+	
 select 
-	background-color: #FFF1DA 
+	background-color: rgba(255, 241, 218, 0.1)
 	border: none 
 	color: #181E4B
 
@@ -128,11 +124,13 @@ select
 
 .info
 	width: 55%
-	margin-top: 114px
+	margin-top: 112px
 	.text 
 		font-family: Poppins
 		font-style: normal
 		font-weight: bold 
+		margin-top: 3px
+		margin-left: 2px
 		font-size: 20px
 		line-height: 30px 
 		text-transform: uppercase 
@@ -144,18 +142,18 @@ select
 		font-style: normal
 		font-weight: 700 
 		font-size: 84px 
-		line-height: 89px 
+		line-height: 88px 
 		letter-spacing: -3px
 		color: #181E4B
 		margin: 0px
 		display: block 
-		margin-bottom: 28px
+		margin-bottom: 30px
 	.decore 
 		display: flex
 		align-items: center
 		background: url(../images/Decore2.png) 
 		background-repeat: no-repeat
-		background-position: right bottom
+		background-position: right bottom 11px
 	p 
 		font-family: Poppins
 		font-style: normal
@@ -204,6 +202,7 @@ select
 	.orange 
 		width: 52px
 		height: 52px
+		margin-top: 10px
 		display: flex
 		justify-content: center
 		align-items: center
@@ -226,6 +225,8 @@ select
 		margin: 0px 20px
 		text-transform: capitalize
 		transition: 0.6s
+		margin-top: 8px
+		color: #5E6282
 		&:hover
 			color: #DF6951
 			text-decoration: underline
@@ -240,7 +241,6 @@ select
 .contact-form 
 	margin-top: 180px
 	padding: 50px 20px 0px 20px
-	// border: 1px solid red
 	border-radius: 120px 20px 20px 20px
 	background: #F9F7FE
 	background-image: url(../images/Group.png)
@@ -276,36 +276,63 @@ select
 
 form 
 	display: flex
+	width: 100%
+	justify-content: center
 	button 
 		width: 180px
 		height: 68px 
 		color: #fff
 		background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%)
 		border: none
+		font-family: Poppins
+		font-style: normal
+		font-weight: 500
+		font-size: 17px
+		line-height: 25px
+		text-align: center
+		letter-spacing: 2px
 		border-radius: 10px
-		margin-left: 30px
+		margin-left: 24px
 		transition: 0.6s 
 		&:hover 
 			background: linear-gradient(180deg, #FF7F50 0%, #FF806C 100%)
 			cursor: pointer
 
 .input-body 
-	max-width: 380px
+	max-width: 390px
 	height: 68px
 	background-color: #fff 
 	display: flex
 	align-items: center
 	border-radius: 10px
 	padding-left: 31px
+	margin-left: 32px
 	margin-right: 0px
 	input 
+		width: 390px
 		border: none
-		margin-left: 5px 
+		margin-left: 7px 
+		font-family: Poppins
+		font-style: normal
+		font-weight: normal
+		font-style: 16px
+		line-height: 24px
+		letter-spacing: 0.2px
+		color: #5E6282
+		&::-webkit-input-placeholder
+			color: #5E6282
+		&::-moz-placeholder
+			color: #5E6282
+		&:-ms-input-placeholder
+			color: #5E6282
+
+placeholder
+	color: red
 
 .abstraction-image-block
 	position: absolute
 	right: 5.4%
-	bottom: -5.1%
+	bottom: -6%
 
 
 @media(max-width: 1141.15px)
@@ -329,9 +356,7 @@ form
 		max-width: 750px
 	.menu 
 		a 
-			margin-left: 20px
-	select
-		background: none
+			margin-left: 0px
 	.content-block
 		display: flex
 		flex-direction: column
@@ -342,6 +367,9 @@ form
 		min-height: 700px
 		img
 			right: 0%
+	.input-body
+		max-width: 100%
+		margin-left: 0px
 
 @media(max-width: 767px)
 	.content 
@@ -367,15 +395,19 @@ form
 			margin: 0px
 			padding: 5px
 	.menu__item_button
-		width: 100%  
 		display: flex
 		justify-content: center
 		align-items: center
-		border: none 
+		border: 1px solid rgba(255, 255, 255, 0.1)
+		&:hover
+			background-color: #fff !important
+			color: #DF6951 !important
+			
 	select
 		margin: 0 auto
-		background: none
 		width: 50px
+		font-weight: bold
+		color: #39425D
 	.content-block
 		display: flex
 		flex-direction: column
@@ -385,6 +417,7 @@ form
 		margin-top: 40px
 		h1
 			font-size: 64px
+			line-height: 68px
 	.image 
 		width: 100%
 		position: relative
@@ -425,10 +458,13 @@ form
 			width: 100% 
 			margin: 30px 0px 0px 0px
 	.input-body
+		max-width: 390px
 		margin-top: 10px
-		max-width: 100%
 		overflow: hidden
 		padding: 0px 0px 0px 20px
+		input 
+			max-width: 390px
+		
 
 			
 
